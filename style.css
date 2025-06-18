@@ -23,7 +23,7 @@ body {
 .grid-container img {
     width: 100%;
     display: block;
-    border-radius: 6px;
+    border-radius: 1px;
     object-fit: cover;
 }
 
@@ -43,7 +43,7 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 1px;
     display: block;
 }
 
@@ -92,9 +92,25 @@ body {
 }
 
 .second-page {
+    margin-top: 300px;
     width: 100%;
     height: 100%;
     background-color: red;
 }
 
-.left {}
+.left h1 {
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+.left p {
+    margin-bottom: 30px;
+}
+
+.third-page {
+    margin-top: 400px;
+}
+
+.last-page {
+    text-align: center;
+}
