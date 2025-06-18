@@ -113,6 +113,12 @@ body {
     height: 100%;
 }
 
+.second-page .left {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
 .left h1 {
     font-size: 70px;
     margin-bottom: 30px;
