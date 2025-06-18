@@ -102,6 +102,7 @@ body {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 1rem;
     margin-top: 1rem;
+    overflow: hidden;
 }
 
 .bottom-right {
@@ -115,7 +116,55 @@ body {
     object-fit: cover;
     border-radius: 1px;
     display: block;
+    transition: transform 0.4s ease-out;
 }
+
+.bottom-grid img {
+    transition: transform 0.4s ease-out;
+}
+
+.bottom-grid img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-out;
+}
+
+.effect {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.effect img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease-out;
+    /* ✅ */
+}
+
+.hover-text {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.effect:hover img {
+    transform: scale(1.1);
+}
+
+.effect:hover .hover-text {
+    opacity: 1;
+}
+
+
 
 /* The Nav Bar */
 .nav {
