@@ -195,3 +195,54 @@ body {
 .project-description span:last-child {
     color: #666;
 }
+
+/* Hover underline effect */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Selection */
+::selection {
+    background-color: black;
+    color: white;
+}
+
+
+.project-filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 5rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Active button style (optional) */
+.filter-btn.active {
+    font-weight: bold;
+}
