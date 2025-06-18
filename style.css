@@ -12,6 +12,11 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Gilroy H';
+    src: url('fonts/Gilroy-ExtraBold.otf');
+}
+
 body {
     font-family: sans-serif;
     background: #fff;
@@ -109,10 +114,12 @@ body {
 .left h1 {
     font-size: 70px;
     margin-bottom: 30px;
+    font-weight: 900;
 }
 
 .left p {
     margin-bottom: 30px;
+    font-weight: 900;
 }
 
 .third-page {
