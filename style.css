@@ -2,6 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Gilroy;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.otf');
+    font-style: normal;
+    font-weight: normal;
 }
 
 body {
@@ -113,4 +121,7 @@ body {
 
 .last-page {
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
