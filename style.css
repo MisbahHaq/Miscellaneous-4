@@ -142,3 +142,72 @@ span {
     align-items: center;
     display: flex;
 }
+
+/* Projects */
+.project {
+    /* padding: 1rem 0; */
+    padding: 0.5rem 0;
+    border-top: 1px solid #e5e5e5;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+.project:hover {
+    opacity: 0.6;
+}
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    align-items: center;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-header {
+    display: flex;
+    /* gap: 3rem; */
+    gap: 2rem;
+    /* margin-bottom: 0.5rem; */
+    margin-bottom: 0.25rem;
+}
+
+.project-year {
+    /* width: 5rem; */
+    width: 4rem;
+}
+
+.project-title {
+    font-weight: 500;
+}
+
+.project-description {
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    /* gap: 3rem; */
+    gap: 2rem;
+    font-size: 0.875rem;
+}
+
+.project-description span:first-child {
+    width: 5rem;
+}
+
+.project-description span:last-child {
+    color: #666;
+}
+
+/* About */
+.about-content {
+    max-width: 36rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+}
