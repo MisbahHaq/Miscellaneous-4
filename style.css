@@ -23,6 +23,7 @@ body {
     padding: 2rem;
 }
 
+/* The First Page */
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -60,6 +61,7 @@ body {
     display: block;
 }
 
+/* The Nav Bar */
 .nav {
     position: fixed;
     bottom: 20px;
@@ -104,6 +106,7 @@ body {
     }
 }
 
+/* The Second Page */
 .second-page {
     margin-top: 300px;
     width: 100%;
@@ -127,6 +130,7 @@ body {
     padding: 10px 20px;
 }
 
+/* The Third Page */
 .third-page {
     margin-top: 400px;
 }
@@ -134,8 +138,11 @@ body {
 .third-page h1 {
     font-size: 90px;
     font-weight: 900;
+    margin-bottom: 40px;
 }
 
+
+/* The Last Page */
 .last-page {
     text-align: center;
     justify-content: center;
@@ -224,7 +231,6 @@ body {
     background-color: black;
     color: white;
 }
-
 
 .project-filters {
     margin-bottom: 20px;
