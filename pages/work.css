@@ -7,15 +7,15 @@
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Light.otf');
+    font-family: "Gilroy";
+    src: url("fonts/Gilroy-Light.otf");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Gilroy H';
-    src: url('fonts/Gilroy-ExtraBold.otf');
+    font-family: "Gilroy H";
+    src: url("fonts/Gilroy-ExtraBold.otf");
 }
 
 body {
@@ -164,15 +164,50 @@ body {
     margin-bottom: 40px;
 }
 
-
 /* The Last Page */
 .last-page {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 500px;
     width: 100%;
+    font-size: clamp(2rem, 10vw, 130px);
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.left,
+.center,
+.right {
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .last-page {
+        flex-direction: column;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .left,
+    .center,
+    .right {
+        text-align: center !important;
+        flex: none;
+    }
 }
 
 /* Projects */
@@ -212,7 +247,7 @@ body {
 .project-title {
     font-weight: 500;
     font-size: 20px;
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
 }
 
 /* Hover underline effect */
@@ -224,7 +259,7 @@ body {
 }
 
 .hover-underline::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
