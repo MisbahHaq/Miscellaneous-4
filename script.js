@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjects('web');
 
     const webBtn = document.getElementById('webBtn');
-    const appBtn = document.getElementById('appBtn');
     const productBtn = document.getElementById('productBtn');
     const showMoreBtn = document.getElementById('showMoreBtn');
     const hideBtn = document.getElementById('hideBtn');
@@ -105,12 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         productBtn.classList.remove('active');
     });
 
-    appBtn.addEventListener('click', () => {
-        renderProjects('app');
-        appBtn.classList.add('active');
-        webBtn.classList.remove('active');
-        productBtn.classList.remove('active');
-    });
 
     productBtn.addEventListener('click', () => {
         renderProjects('product');
