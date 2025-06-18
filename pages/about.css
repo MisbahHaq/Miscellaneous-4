@@ -1,3 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Gilroy;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy H';
+    src: url('fonts/Gilroy-ExtraBold.otf');
+}
+
+body {
+    font-family: sans-serif;
+    background: #fff;
+    padding: 2rem;
+}
+
 /* The Nav Bar */
 .nav {
     position: fixed;
