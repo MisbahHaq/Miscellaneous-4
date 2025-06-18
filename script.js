@@ -1,19 +1,19 @@
 const projects = [
-    { year: '2025', title: 'Apple Vision', description: 'Web Development, Design', link: 'https://de-sign.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Hotel Odisej', description: 'Design, Web Development', link: 'https://odisej-hotel.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Lazarev Agency', description: 'Web Development, Design', link: 'https://lazarev-agen.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Sundown', description: 'Web Development, Design', link: 'https://sundown-port.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Paper Portfolio', description: 'Design, Development', link: 'https://paper-port.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Ephemeral Equilibrium.', description: 'Design, Web Development', link: 'https://equilibrium-port.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Works | Studio', description: 'Design, Web Development', link: 'https://works-studios.netlify.app/', type: 'web' },
-    { year: '2025', title: 'FoodGo', description: 'FoodGo is a mobile app designed to satisfy your cravings instantly.', link: './foodgo.html', type: 'app' },
-    { year: '2025', title: 'CineFlix', description: 'CineFlix is designed to enhance your movie-going experience. Browse latest movies.', link: './cineflix.html', type: 'app' },
-    { year: '2025', title: 'Mega Mart', description: 'Mega Mart is a grocery ordering app designed to simplify everyday shopping.', link: './mega.html', type: 'app' },
-    { year: '2025', title: 'Aurpaisy', description: 'Aurpaisy is a mobile banking app designed to revolutionize the way you manage finances.', link: './aur.html', type: 'app' },
-    { year: '2025', title: 'Rejouice', description: 'Web Development, Design', link: 'https://rejoice-port.netlify.app/', type: 'web' },
-    { year: '2025', title: 'RayBin', description: 'Web Development, Design', link: 'https://raybin.netlify.app/', type: 'web' },
-    { year: '2025', title: 'CyberFiction', description: 'Web Development', link: 'https://cyberfiction-port.netlify.app/', type: 'web' },
-    { year: '2025', title: 'Zelt', description: 'Design, Development', link: 'https://zelt-port.netlify.app/', type: 'web' },
+    { title: 'Apple Vision', link: 'https://de-sign.netlify.app/', type: 'web' },
+    { title: 'Hotel Odisej', link: 'https://odisej-hotel.netlify.app/', type: 'web' },
+    { title: 'Lazarev Agency', link: 'https://lazarev-agen.netlify.app/', type: 'web' },
+    { title: 'Sundown', link: 'https://sundown-port.netlify.app/', type: 'web' },
+    { title: 'Paper Portfolio', link: 'https://paper-port.netlify.app/', type: 'web' },
+    { title: 'Ephemeral Equilibrium.', link: 'https://equilibrium-port.netlify.app/', type: 'web' },
+    { title: 'Works | Studio', link: 'https://works-studios.netlify.app/', type: 'web' },
+    { title: 'FoodGo', link: './foodgo.html', type: 'app' },
+    { title: 'CineFlix', link: './cineflix.html', type: 'app' },
+    { title: 'Mega Mart', link: './mega.html', type: 'app' },
+    { title: 'Aurpaisy', link: './aur.html', type: 'app' },
+    { title: 'Rejouice', link: 'https://rejoice-port.netlify.app/', type: 'web' },
+    { title: 'RayBin', link: 'https://raybin.netlify.app/', type: 'web' },
+    { title: 'CyberFiction', link: 'https://cyberfiction-port.netlify.app/', type: 'web' },
+    { title: 'Zelt', link: 'https://zelt-port.netlify.app/', type: 'web' },
 
     // New Product Projects
     { year: '2025', title: 'ATS Resume Checker', description: 'Make your resume stand out for automated systems.', link: 'https://ats-resume-tester.netlify.app/', type: 'product' },
@@ -64,10 +64,8 @@ function createProjectElement(project) {
       <div class="project-content">
         <div class="project-info">
           <div class="project-header">
-            <span class="project-year">${project.year}</span>
             <div>
               <div class="project-title">${project.title}</div>
-              <div class="project-description">${project.description}</div>
             </div>
           </div>
         </div>
@@ -134,4 +132,28 @@ document.addEventListener('DOMContentLoaded', () => {
         showMoreBtn.style.display = 'inline-block';
         hideBtn.style.display = 'none';
     });
+
+    const follower = document.querySelector('.mouse-follower');
+
+    window.addEventListener('mousemove', (e) => {
+        follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateFollower() {
+        currentX += (mouseX - currentX) * 0.2;
+        currentY += (mouseY - currentY) * 0.2;
+        follower.style.transform = `translate(${currentX}px, ${currentY}px)`;
+        requestAnimationFrame(animateFollower);
+    }
+
+    animateFollower();
+
+
 });
