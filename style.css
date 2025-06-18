@@ -121,7 +121,7 @@ body {
     font-weight: 900;
 }
 
-span {
+.spa {
     border-radius: 35px;
     border: solid black 1px;
     padding: 10px 20px;
@@ -145,7 +145,6 @@ span {
 
 /* Projects */
 .project {
-    /* padding: 1rem 0; */
     padding: 0.5rem 0;
     border-top: 1px solid #e5e5e5;
     display: block;
@@ -161,7 +160,6 @@ span {
 .project-content {
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-start; */
     align-items: center;
 }
 
@@ -171,14 +169,11 @@ span {
 
 .project-header {
     display: flex;
-    /* gap: 3rem; */
     gap: 2rem;
-    /* margin-bottom: 0.5rem; */
     margin-bottom: 0.25rem;
 }
 
 .project-year {
-    /* width: 5rem; */
     width: 4rem;
 }
 
@@ -189,7 +184,6 @@ span {
 .project-description {
     color: rgba(0, 0, 0, 0.6);
     display: flex;
-    /* gap: 3rem; */
     gap: 2rem;
     font-size: 0.875rem;
 }
@@ -200,14 +194,4 @@ span {
 
 .project-description span:last-child {
     color: #666;
-}
-
-/* About */
-.about-content {
-    max-width: 36rem;
-}
-
-.about-content p {
-    margin-bottom: 1.5rem;
-    font-size: 1.125rem;
 }
