@@ -126,6 +126,11 @@ body {
     margin-top: 400px;
 }
 
+.third-page h1 {
+    font-size: 90px;
+    font-weight: 900;
+}
+
 .last-page {
     text-align: center;
     justify-content: center;
